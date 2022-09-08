@@ -169,6 +169,7 @@ def plot_features(array, labels, feature_labels):
                plt.savefig(args.opath+'/'+feature_labels[ifeat]+'.png')
 
     elif len(array.shape) == 3:
+        for ifeat in range(array.shape[-1]):
             plt.clf()
             fig,ax = plt.subplots() 
             ax = axis_settings(ax)
